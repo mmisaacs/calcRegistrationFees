@@ -72,7 +72,7 @@ public class task1{
                 if(stuReg.isSelected()){
                     stuNum.setEditable(true);
                     items.add(stuRegReceipt);
-                    genCost = 895.0 * (Double.parseDouble(stuNum.getText()));
+                    stuCost = 895.0 * (Double.parseDouble(stuNum.getText()));
                 }
                 else{
                     stuNum.setEditable(false);
@@ -236,7 +236,7 @@ public class task1{
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(e.getActionCommand().equals("Total")) {
-                    total = genCost + stuCost + dinCost + ws1Cost + ws2Cost + ws3Cost + ws4Cost;
+                    total = genCost /*+ stuCost + dinCost + ws1Cost + ws2Cost + ws3Cost + ws4Cost*/;
                     totalPrice.setText("$" + String.format("%.2f", total));
                     total = 0.0;
                 }
